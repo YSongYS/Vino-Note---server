@@ -1,0 +1,2 @@
+class SmellsController < ApplicationController
+end

@@ -3,8 +3,8 @@ Vino note
 Resources:
   * User
     - email
-    - nick name
-    - password
+    - nickname
+    - password_digest
 
   * Log
     - user id
@@ -13,6 +13,7 @@ Resources:
     - smell id
     - taste id
     - concluding note
+    - rating
     - starred (boolean)
 
   * Wine
@@ -22,6 +23,7 @@ Resources:
     - winery
     - region
     - country
+    - price range
 
   * Look
     - color (hex code)
