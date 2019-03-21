@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_105808) do
+ActiveRecord::Schema.define(version: 2019_03_21_154150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,12 +42,11 @@ ActiveRecord::Schema.define(version: 2019_03_21_105808) do
   end
 
   create_table "smells", force: :cascade do |t|
-    t.string "primary"
-    t.string "secondary"
-    t.string "tertiary"
-    t.string "flaw"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "level_one"
+    t.string "level_two"
+    t.string "level_three"
   end
 
   create_table "tastes", force: :cascade do |t|
@@ -55,9 +54,9 @@ ActiveRecord::Schema.define(version: 2019_03_21_105808) do
     t.integer "acidity"
     t.integer "tannin"
     t.integer "alcohol"
-    t.integer "boy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "body"
   end
 
   create_table "users", force: :cascade do |t|
