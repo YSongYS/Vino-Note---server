@@ -1,2 +1,14 @@
 class WinesController < ApplicationController
+
+  def create
+    @wine = Wine.create(wine_params)
+    render json:@wine
+  end
+
+  private
+
+  def wine_params
+    params.require(:wine).permit(:name, :variety, :vintage, :winery, :region, :country, :price_range)
+  end
+
 end
