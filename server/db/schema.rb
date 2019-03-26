@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_22_114541) do
+ActiveRecord::Schema.define(version: 2019_03_26_110258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,9 +44,14 @@ ActiveRecord::Schema.define(version: 2019_03_22_114541) do
   create_table "smells", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "level_one"
-    t.string "level_two"
-    t.string "level_three"
+    t.string "primary_level_two"
+    t.string "primary_level_three"
+    t.string "secondary_level_two"
+    t.string "secondary_level_three"
+    t.string "tertiary_level_two"
+    t.string "tertiary_level_three"
+    t.string "flaw_level_two"
+    t.string "flaw_level_three"
   end
 
   create_table "tastes", force: :cascade do |t|
