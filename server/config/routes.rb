@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :wines
   resources :logs, only: [:show, :create]
   resources :smells, only: [:show, :create]
-  resources :looks, only: [:show]
-  resources :tastes, only: [:show]
+  resources :looks, only: [:show, :create]
+  resources :tastes, only: [:show, :create]
 
 
   resources :users, only: [:create, :update]
