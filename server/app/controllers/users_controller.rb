@@ -15,18 +15,18 @@ class UsersController < ApplicationController
         render json: { user: UserSerializer.new(current_user) }, status: :accepted
     end
 
-    def edit
-    end
 
-    def update
-        @user = User.find(params[:id])
-        @user.update
+
+    def all_logs
+      @user = User.find(params[:id])
+      @logs = @user.logs
+      render json:@logs
     end
 
     private
 
-    def user_params 
+    def user_params
         params.require(:user).permit(:email, :password, :password_confirmation, :nickname)
     end
-    
+
 end

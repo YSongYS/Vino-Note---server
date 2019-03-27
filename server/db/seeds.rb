@@ -1,10 +1,11 @@
+Log.destroy_all
 Look.destroy_all
 Smell.destroy_all
 Taste.destroy_all
 User.destroy_all
 Smell.destroy_all
 Wine.destroy_all
-Log.destroy_all
+
 
 ############################################################
 # CREATE COLORS WITH CALRITY AND VISCOSITY PROFILE         #
