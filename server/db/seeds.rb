@@ -2,7 +2,6 @@ Log.destroy_all
 Look.destroy_all
 Smell.destroy_all
 Taste.destroy_all
-User.destroy_all
 Smell.destroy_all
 Wine.destroy_all
 
@@ -38,11 +37,11 @@ scale = [1,2,3,4,5]
 tastes = scale.map{|l1| scale.map{|l2| scale.map{|l3| scale.map{|l4| scale.map{|l5| {sweetness: l1, acidity: l2, tannin: l3, alcohol: l4, body: l5} }}}}}.flatten
 Taste.create(tastes)
 
-users = [
-  {email: "song@gmail.com", nickname: "Song", password: "cici<3wine"},
-  {email: "minha@gmail.com", nickname: "Minha", password: "minha<3wine"}
-]
-User.create(users)
+# users = [
+#   {email: "song@gmail.com", nickname: "Song", password: "cici<3wine"},
+#   {email: "minha@gmail.com", nickname: "Minha", password: "minha<3wine"}
+# ]
+# User.create(users)
 
 
 #Half random seed data ###################################
