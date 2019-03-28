@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   resources :smells, only: [:show, :create]
   resources :looks, only: [:show, :create]
   resources :tastes, only: [:show, :create]
-
-
   resources :users, only: [:create, :update]
 
   post '/login', to: 'auth#create'
