@@ -26,6 +26,26 @@ class UsersController < ApplicationController
       render json:@logs
     end
 
+    def favorite_wine_country
+        @user = User.find(params[:id])
+        countries = @user.wines.map{|wine| wine.country}
+        fav_country = countries.max_by { |c| countries.count(c) }
+        render json: fav_country
+    end
+
+    def favorite_wine_variety
+        @user = User.find(params[:id])
+        varieties = @user.wines.map{|wine| wine.variety}
+        fav_variety = varieties.max_by { |v| varieties.count(v) }
+        render json: fav_variety
+    end
+
+    def logs_created_dates 
+        @user = User.find(params[:id])
+        dates = @user.logs.map{|log| log.created_at}
+        render json: dates
+    end
+
     private
 
     def user_params
