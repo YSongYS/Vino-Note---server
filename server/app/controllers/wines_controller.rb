@@ -5,7 +5,7 @@ class WinesController < ApplicationController
     render json: @wine
   end
 
-  def show 
+  def show
     @wine = Wine.find(params[:id])
     render json: @wine
   end
@@ -13,7 +13,7 @@ class WinesController < ApplicationController
   private
 
   def wine_params
-    params.require(:wine).permit(:name, :variety, :vintage, :winery, :region, :country, :price_range)
+    params.require(:wine).permit(:name, :variety, :vintage, :winery, :region, :country, :price_range, :image)
   end
 
 end
