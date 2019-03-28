@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :wines
-  resources :logs, only: [:show, :create]
+  resources :logs, only: [:show, :create, :update]
   resources :smells, only: [:show, :create]
   resources :looks, only: [:show, :create]
   resources :tastes, only: [:show, :create]
