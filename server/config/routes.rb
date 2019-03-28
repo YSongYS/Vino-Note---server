@@ -14,5 +14,7 @@ Rails.application.routes.draw do
 
   #############################
   get '/users/:id/logs', to:'users#all_logs'
-
+  get '/users/:id/favorite_wine_country', to: 'users#favorite_wine_country'
+  get '/users/:id/favorite_wine_variety', to: 'users#favorite_wine_variety'
+  get '/users/:id/logs_created_dates', to: 'users#logs_created_dates'
 end
